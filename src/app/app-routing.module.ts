@@ -3,8 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path: 'index',
+    loadChildren: () => import('./pages/index/index.module').then( m => m.IndexPageModule)
+  },
+  {
+    path: 'agendar-consulta',
+    loadChildren: () => import('./pages/agendar-consulta/agendar-consulta.module').then( m => m.AgendarConsultaPageModule)
+  },
+  {
+    path: 'historico-consuta',
+    loadChildren: () => import('./pages/historico-consuta/historico-consuta.module').then( m => m.HistoricoConsutaPageModule)
   }
 ];
 @NgModule({
