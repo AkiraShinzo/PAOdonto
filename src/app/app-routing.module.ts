@@ -11,8 +11,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/agendar-consulta/agendar-consulta.module').then( m => m.AgendarConsultaPageModule)
   },
   {
-    path: 'historico-consuta',
-    loadChildren: () => import('./pages/historico-consuta/historico-consuta.module').then( m => m.HistoricoConsutaPageModule)
+    path: 'historico-consulta',
+    loadChildren: () => import('./pages/historico-consulta/historico-consulta.module').then( m => m.HistoricoConsultaPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
   }
 ];
 @NgModule({

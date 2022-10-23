@@ -1,0 +1,41 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+ion-content {
+  .black {
+    background-color: black;
+    background-image: url('/assets/BACKGROUND.jpg');
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .paciente {
+    width: 300px;
+    border: 15px solid cyan;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+    background-color: cornflowerblue;
+    border-radius: 5%;
+  }
+p {
+  text-align: center;
+	font-family: monospace;
+	color: white;
+text-align: left;
+	display: block;
+	font-size: 1em;
+  font-family:monospace;
+}
+}
