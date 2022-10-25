@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from "src/app/pages/shared/authentication-service";
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-index',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexPage implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthenticationService,public auth: AngularFireAuth) { }
 
   ngOnInit() {
   }
