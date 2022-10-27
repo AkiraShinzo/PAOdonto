@@ -1,15 +1,15 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
-  li {
-    float: left;
-  }
+li {
+	float: left;
+}
 
-  ion-content {
-    .black {
+ion-content{
+  .black{
       background-color: black;
       background-image: url('/assets/BACKGROUND.jpg');
       width: 100vw;
@@ -18,24 +18,24 @@ ul {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
+      h1{
+        text-align: center;
+        font-family:monospace;
+        color: white;
 
-    .paciente {
-      width: 300px;
-      border: 15px solid cyan;
-      padding-left: 5px;
-      padding-right: 5px;
-      margin: 20px;
-      background-color: cornflowerblue;
-      border-radius: 5%;
-    }
-  p {
-    text-align: center;
-      font-family: monospace;
-      color: white;
-  text-align: left;
-      display: block;
-      font-size: 1em;
-    font-family:monospace;
-  }
-  }
+        display: block;
+        font-size: 3em;
+      }
+
+      h2{
+        text-align: center;
+        font-family:monospace;
+        color: white;
+
+        display: block;
+        font-size: 2em;
+      }
+
+}
+}
+
