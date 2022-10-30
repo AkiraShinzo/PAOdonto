@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'agendar-consulta2',
     loadChildren: () => import('./pages/agendar-consulta2/agendar-consulta2.module').then( m => m.AgendarConsulta2PageModule)
+  },
+  {
+    path: 'pagamento',
+    loadChildren: () => import('./pages/pagamento/pagamento.module').then( m => m.PagamentoPageModule)
+  },
+  {
+    path: 'finalizar',
+    loadChildren: () => import('./pages/finalizar/finalizar.module').then( m => m.FinalizarPageModule)
   }
 ];
 @NgModule({
