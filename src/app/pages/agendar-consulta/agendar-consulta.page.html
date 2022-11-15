@@ -9,20 +9,32 @@
     <div class="form">
       <h2>Data e Hora</h2>
       <ion-item>
-        <ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+        <ion-datetime [isDateEnabled]="isWeekday"
+        locale="pt-BR" displayFormat="DD/MM/YYYY HH:mm"
+        required
+        hourCycle="h23"
+        hourValues="{{hourValues}}"
+        minuteValues="{{minuteValues}}" locale="en-GB"
+        #data ></ion-datetime>
       </ion-item>
       <br>
-      <h2>Procedimento</h2>
-      <ion-item>
-        <select></select>
-      </ion-item>
+        <ion-list color="transparent" lines="none">
+          <ion-item class="item item-trns text-center">
+            <ion-select interface="popover" placeholder="Procedimento" required #servico [(ngModel)]="procedimentoSel">
+              <ion-select-option *ngFor="let proc of procedimento | async" value="{{proc.id}}">{{proc.nome}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
       <br>
-      <h2>Profissional</h2>
-      <ion-item>
-        <select></select>
-      </ion-item>
+      <ion-list color="transparent" lines="none">
+        <ion-item class="item item-trns text-center">
+          <ion-select interface="popover" placeholder="Profissional" required #agente [(ngModel)]="profissionalSel">
+            <ion-select-option *ngFor="let prof of profissional| async" value="{{prof.id}}">{{prof.nome}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
       <br>
-      <ion-button expand="block" size="large" href="agendar-consulta2">Continuar</ion-button>
+      <ion-button expand="block" size="large" (click)="config(servico,agente,data)" [disabled]="!canSave()">Continuar</ion-button>
     </div>
 
 
