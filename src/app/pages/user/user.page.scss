@@ -1,0 +1,46 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	float: left;
+}
+
+ion-content{
+  .black{
+      background-color: black;
+      background-image: url('/assets/BACKGROUND.jpg');
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1{
+        text-align: center;
+        font-family:'asap';
+        color: white;
+
+        display: block;
+        font-size: 3em;
+      }
+
+      h2{
+        text-align: center;
+        font-family:'asap';
+        color: white;
+
+        display: block;
+        font-size: 15px;
+      }
+
+}
+}
+
+ion-button{
+  border-radius: 4em;
+}
+
+
