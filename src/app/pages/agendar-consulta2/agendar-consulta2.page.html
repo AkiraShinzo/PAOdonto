@@ -9,31 +9,30 @@
           <div class="form">
             <h2>Nome</h2>
             <ion-item>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" #nome [(ngModel)]="nomeSel" ></ion-input>
             </ion-item>
             <h2>Sobrenome</h2>
             <ion-item>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" #sobrenome [(ngModel)]="sobrenomeSel"></ion-input>
             </ion-item>
-
             <table>
               <tr>
                 <th>
                   <h2>Idade</h2>
                   <ion-item>
-                    <ion-input type="number"></ion-input>
+                    <ion-input type="number" #idade [(ngModel)]="idadeSel"></ion-input>
                   </ion-item>
                 </th>
                 <th>
                   <h2>Data de Nascimento</h2>
                   <ion-item>
-                    <ion-input type="date"></ion-input>
+                    <ion-input type="date" #datadenascimento [(ngModel)]="datadenascimentoSel"></ion-input>
                   </ion-item>
                 </th>
               </tr>
             </table>
 
-            <ion-button expand="block" size="large" href="pagamento">Continuar</ion-button>
+            <ion-button expand="block" size="large" (click)="config(nome,sobrenome,idade,datadenascimento)" [disabled]="!canSave()" >Continuar</ion-button>
           </div>
 
 

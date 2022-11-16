@@ -6,27 +6,14 @@
     <div class="logo">
     </div>
     <h1>Pagamento</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <ion-button expand="block">Pix</ion-button>
-    <ion-button expand="block">Plano de Saúde</ion-button>
-    <ion-button expand="block">Dinheiro</ion-button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <ion-button expand="block" href="finalizar">Agendar</ion-button>
+    <ion-radio-group *ngFor="let pagamento of pagamentos | async" required
+      [(ngModel)]="pagamentoSel"
+      (ionChange)="checkValue($event)">
+      <ion-item color="none" lines="none">
+        <ion-radio class="pagamento" value="{{pagamento.id}}" mode="md" style="background-image: url('{{pagamento.img}}');"></ion-radio>
+        <p>{{pagamento.nome}}</p>
+      </ion-item>
+    </ion-radio-group>
+    <ion-button expand="block" size="large" (click)="agendar()">Agendar</ion-button>
 </div>
 </ion-content>

@@ -36,6 +36,18 @@ ion-content{
         font-size: 15px;
       }
 
+      ion-radio.pagamento{
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: 0px 10px;
+        margin-bottom: 10px;
+        background-size: cover;
+        --mark: none;
+        transition-duration:200ms;
+        background-color: white;
+    }
+
 }
 }
 
