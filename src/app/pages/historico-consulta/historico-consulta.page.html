@@ -5,12 +5,22 @@
   <div class="black">
     <div class="logo">
     </div>
-    <div class="paciente">
-      <p>Nome: Goku</p>
-      <p>Procedimento: Limpeza Dentária</p>
-      <p>Data:25/10/2022</p>
-      <p>Status:Agendado</p>
-      <ion-button expand="block" color="secondary" size="small" Href=""><p>Mais Informações</p></ion-button>
-    </div>
+    <ion-card *ngFor="let agen of agendamentosHIS | async" [color]="canColor(agen.status)">
+      <ion-card-header>
+        <ion-card-title *ngFor="let servi of service | async"><p *ngIf="servi.id==agen.service">{{servi.nome}}</p></ion-card-title>
+        <ion-card-subtitle *ngFor="let agent of agente | async"><p *ngIf="agent.id==agen.agente">{{agent.nome}}</p></ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{agen.nomePaciente}}
+        <br>
+        {{agen.data}}
+        <br>
+        {{agen.horario}}
+      </ion-card-content>
+
+      <ion-button fill="clear" (click)="atender(agen.id)" [disabled]="canClick(agen.status)">Atendido</ion-button>
+      <ion-button fill="clear" (click)="cancelar(agen.id)" [disabled]="canClick(agen.status)">Cancelar Consulta</ion-button>
+    </ion-card>
 </div>
 </ion-content>

@@ -55,7 +55,7 @@ export class PagamentoPage implements OnInit {
     this.pagamentoSel = event.detail.value;
   }
   agendar(){
-    this.agendamentos.add({service: this.service,agente: this.agente, data: this.nowdata, horario: this.nowtime, nomePaciente: this.nome, sobrenomePaciente: this.sobrenome, idadePaciente: this.idade, nascimentoPaciente: this.datadenascimento,pagamento: this.pagamentoSel,id: ''}).then( novo => {
+    this.agendamentos.add({service: this.service,agente: this.agente, data: this.nowdata, horario: this.nowtime, nomePaciente: this.nome, sobrenomePaciente: this.sobrenome, idadePaciente: this.idade, nascimentoPaciente: this.datadenascimento,status:'',pagamento: this.pagamentoSel,id: ''}).then( novo => {
       this.agendamentos.doc(novo.id).update({id: novo.id})
       });
 

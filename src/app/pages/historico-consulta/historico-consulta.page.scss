@@ -10,32 +10,35 @@ li {
 
 ion-content {
   .black {
-    background-color: black;
     background-image: url('/assets/BACKGROUND.jpg');
+    background-repeat: repeat-y;
     width: 100vw;
-    height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
-  .paciente {
-    width: 300px;
-    border: 15px solid cyan;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 20px;
-    background-color: cornflowerblue;
-    border-radius: 5%;
-  }
-p {
-  text-align: center;
-	font-family: monospace;
-	color: white;
-text-align: left;
-	display: block;
-	font-size: 1em;
-  font-family:monospace;
+
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
 }
+
+ion-card{
+  min-height: 250px;
+}
+
+ion-card.status1{
+  --background-color: #ACE1AF;
+  box-shadow: none;
+  $card-md-background-color: #ACE1AF;
+}
+
+ion-card.status2{
+  --background-color: #fd5c63;
+  box-shadow: none;
+  $card-md-background-color: #fd5c63;
+}
+
 }
